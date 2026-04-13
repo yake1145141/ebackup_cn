@@ -1,0 +1,69 @@
+# eBackup 插件消息配置文件
+# 简体中文翻译
+
+# 命令相关消息
+commands:
+  help: "使用 /ebackup help 查看帮助！"
+  backup:
+    in_progress: "备份正在进行中！"
+    starting: "开始备份（查看控制台日志获取详细信息）..."
+    finished: "本地备份已完成！"
+  backuplocal:
+    in_progress: "备份正在进行中！"
+    starting: "开始备份（查看控制台日志获取详细信息）..."
+    finished: "完成！"
+  list: "本地备份："
+  stats: "磁盘统计信息"
+  testupload:
+    starting: "开始上传测试..."
+    check_console: "请查看控制台获取上传状态！"
+  reload:
+    starting: "开始重新加载插件..."
+    finished: "已重新加载 eBackup！"
+
+# 帮助信息
+help:
+  header: "===== eBackup v{version} 帮助 ====="
+  backup: "/ebackup backup - 开始服务器备份。"
+  backuplocal: "/ebackup backuplocal - 开始服务器备份，但不上传到 FTP/SFTP。"
+  list: "/ebackup list - 列出文件夹中的备份。"
+  stats: "/ebackup stats - 显示磁盘空间。"
+  testupload: "/ebackup testupload - 测试上传文件到 FTP/SFTP 而不创建备份。"
+  reload: "/ebackup reload - 从配置文件重新加载插件设置。"
+
+# 统计信息
+stats:
+  header: "磁盘统计信息"
+  total_size: "总大小: {size}GB"
+  usable_space: "可用空间: {size}GB"
+  free_space: "空闲空间: {size}GB"
+
+# 日志信息
+logs:
+  initializing: "初始化 eBackup..."
+  initialized: "插件初始化完成！"
+  disabling:
+    tasks_cancelled: "由于服务器关闭，任何正在运行的任务（上传或备份）将被取消。"
+  disabled: "已禁用 eBackup！"
+  backup:
+    starting: "开始备份..."
+    plugin_disabled: "无法开始备份，因为插件已被服务器禁用！"
+    backing_up_world: "正在备份世界 {world} {path}..."
+    backing_up_other: "正在备份其他文件..."
+    complete: "本地备份完成！"
+    scheduled_skipped: "计划备份现在应该执行，但检测到备份正在进行中。跳过..."
+    no_players_skipped: "自上次备份或服务器启动以来未检测到玩家加入，跳过备份..."
+  upload:
+    starting: "开始上传 {file} 到 {type} 服务器..."
+    scheduled_skipped: "计划上传现在应该执行，但检测到上传正在进行中。跳过..."
+    invalid_type: "指定的上传类型无效（只接受 ftp/sftp）。跳过上传..."
+    test_successful: "测试上传成功！"
+    successful: "上传 {file} 成功！"
+    failed: "上传 {file} 失败。"
+  delete_after_upload:
+    successful: "上传后成功删除 {file}。"
+    failed: "上传后无法删除 {file}。"
+  compression:
+    invalid_level: "设置的压缩级别无效！必须在 0-9 之间。默认为 4。"
+  backup_file:
+    error: "备份文件 {file} 时出错，备份将忽略此文件：{message}"
